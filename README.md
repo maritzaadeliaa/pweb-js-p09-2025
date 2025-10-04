@@ -1,5 +1,3 @@
-# pweb-js-p09-2025
-
 # Praktikum Pemrograman Web 2025
 
   |       Nama        |     NRP    |
