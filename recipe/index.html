@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Recipe Collection</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="nav-left">
+      <h1>Recipe Collection</h1>
+    </div>
+    <div class="nav-right">
+      <span>Welcome, Emily!</span>
+      <button id="logoutBtn">LOGOUT</button>
+    </div>
+  </nav>
+
+  <!-- HEADER -->
+  <header class="header">
+    <h2>Your Recipe Collection</h2>
+    <p>Discover and manage your favorite recipes</p>
+  </header>
+
+  <!-- SEARCH & FILTER -->
+  <div class="filter-bar">
+    <input type="text" id="searchInput" placeholder="Search recipes..." />
+    <select id="filterSelect">
+      <option value="all">All Cuisines</option>
+      <option value="italian">Italian</option>
+      <option value="asian">Asian</option>
+      <option value="american">American</option>
+    </select>
+    <span class="count-text">Showing 3 of 3 recipes</span>
+  </div>
+
+  <!-- RECIPE GRID -->
+  <main class="recipe-grid" id="recipeGrid">
+    <!-- masih static nanti fetch dari api -->
+    <div class="recipe-card">
+      <img src="https://i.imgur.com/fJtY8rF.jpg" alt="Pizza" />
+      <div class="recipe-info">
+        <h3>Classic Margherita Pizza</h3>
+        <p><b>Ingredients:</b> Pizza dough, Tomato sauce, Mozzarella cheese</p>
+        <p>⏱️ 15 mins • 🟢 Easy • 🇮🇹 Italian</p>
+        <button class="view-btn">View Full Recipe</button>
+      </div>
+    </div>
+
+    <div class="recipe-card">
+      <img src="https://i.imgur.com/9wT3v8x.jpg" alt="Stir Fry" />
+      <div class="recipe-info">
+        <h3>Vegetarian Stir-Fry</h3>
+        <p><b>Ingredients:</b> Tofu, Broccoli, Carrots, Peppers</p>
+        <p>⏱️ 20 mins • 🟡 Medium • 🌏 Asian</p>
+        <button class="view-btn">View Full Recipe</button>
+      </div>
+    </div>
+
+    <div class="recipe-card">
+      <img src="https://i.imgur.com/LqA2gEr.jpg" alt="Cookies" />
+      <div class="recipe-info">
+        <h3>Chocolate Chip Cookies</h3>
+        <p><b>Ingredients:</b> Butter, Sugar, Flour, Chocolate chips</p>
+        <p>⏱️ 10 mins • 🟢 Easy • 🇺🇸 American</p>
+        <button class="view-btn">View Full Recipe</button>
+      </div>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
