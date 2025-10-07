@@ -710,3 +710,12 @@ button:focus, input:focus, select:focus {
         margin: 0;
     }
 }
+
+.error{
+    text-align: center;
+    padding: 3rem;    
+    color: red;
+    grid-column: 1 / -1;
+    font-size: 1.3rem;
+    font-weight: 500;
+}
