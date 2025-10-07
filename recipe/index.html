@@ -246,41 +246,51 @@
         <div class="modal-header">
           <h2>${recipe.name}</h2>
         </div>
-        
-        <div class="modal-image">
-          <img src="${recipe.image}" alt="${recipe.name}" />
+
+        <div class="modal-top">
+          <div class="modal-image">
+            <img src="${recipe.image}" alt="${recipe.name}" />
+          </div>
+
+          <div class="modal-meta-grid">
+            <div class="modal-meta-item">
+              <div class="modal-meta-label">PREP TIME</div>
+              <div class="modal-meta-value">${recipe.prepTimeMinutes} mins</div>
+            </div>
+            <div class="modal-meta-item">
+              <div class="modal-meta-label">COOK TIME</div>
+              <div class="modal-meta-value">${recipe.cookTimeMinutes} mins</div>
+            </div>
+            <div class="modal-meta-item">
+              <div class="modal-meta-label">TOTAL TIME</div>
+              <div class="modal-meta-value">${totalTime} mins</div>
+            </div>
+            <div class="modal-meta-item">
+              <div class="modal-meta-label">SERVINGS</div>
+              <div class="modal-meta-value">${recipe.servings}</div>
+            </div>
+            <div class="modal-meta-item">
+              <div class="modal-meta-label">DIFFICULTY</div>
+              <div class="modal-meta-value">${recipe.difficulty}</div>
+            </div>
+            <div class="modal-meta-item">
+              <div class="modal-meta-label">CUISINE</div>
+              <div class="modal-meta-value">${recipe.cuisine}</div>
+            </div>
+          </div>
         </div>
+
         
-        <div class="modal-meta-grid">
-          <div class="modal-meta-item">
-            <div class="modal-meta-label">PREP TIME</div>
-            <div class="modal-meta-value">${recipe.prepTimeMinutes} mins</div>
+      
+        <div class="modal-info">
+          <div class="modal-rating">
+            <span class="modal-stars">${ratingStars}</span>
+            <span class="modal-rating-text">${recipe.rating} (${recipe.reviewCount} reviews)</span>
           </div>
-          <div class="modal-meta-item">
-            <div class="modal-meta-label">COOK TIME</div>
-            <div class="modal-meta-value">${recipe.cookTimeMinutes} mins</div>
+          <div class="modal-nutrition">
+            <h3>Nutrition Information</h3>
+            <div class="nutrition-value">${recipe.caloriesPerServing} calories per serving</div>
           </div>
-          <div class="modal-meta-item">
-            <div class="modal-meta-label">TOTAL TIME</div>
-            <div class="modal-meta-value">${totalTime} mins</div>
-          </div>
-          <div class="modal-meta-item">
-            <div class="modal-meta-label">SERVINGS</div>
-            <div class="modal-meta-value">${recipe.servings}</div>
-          </div>
-          <div class="modal-meta-item">
-            <div class="modal-meta-label">DIFFICULTY</div>
-            <div class="modal-meta-value">${recipe.difficulty}</div>
-          </div>
-          <div class="modal-meta-item">
-            <div class="modal-meta-label">CUISINE</div>
-            <div class="modal-meta-value">${recipe.cuisine}</div>
-          </div>
-        </div>
-        
-        <div class="modal-rating">
-          <span class="modal-stars">${ratingStars}</span>
-          <span class="modal-rating-text">${recipe.rating} (${recipe.reviewCount} reviews)</span>
         </div>
         
         <div class="modal-section">
@@ -306,17 +316,16 @@
         </div>
         ` : ''}
         
-        <div class="modal-nutrition">
-          <h3>Nutrition Information</h3>
-          <div class="nutrition-value">${recipe.caloriesPerServing} calories per serving</div>
-        </div>
+        
       `;
       
       document.getElementById('recipeModal').style.display = 'block';
+      document.body.classList.add("no-scroll");
     }
 
     // Close modal
     function closeModal() {
+      document.body.classList.remove("no-scroll")
       document.getElementById('recipeModal').style.display = 'none';
     }
 
