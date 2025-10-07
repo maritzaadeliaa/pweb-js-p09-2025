@@ -1,3 +1,4 @@
+  
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,8 +8,68 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="login-container">
-    <h2>Hello!</h2>
+
+  <div class="food-bg">
+    <span class="food-bg-emoji e1">🍔</span>
+    <span class="food-bg-emoji e2">🍕</span>
+    <span class="food-bg-emoji e3">🍣</span>
+    <span class="food-bg-emoji e4">🍩</span>
+    <span class="food-bg-emoji e5">🍓</span>
+    <span class="food-bg-emoji e6">🥦</span>
+    <span class="food-bg-emoji e7">🍟</span>
+    <span class="food-bg-emoji e8">🍦</span>
+    <span class="food-bg-emoji e9">🍉</span>
+    <span class="food-bg-emoji e10">🍗</span>
+    <span class="food-bg-emoji e11">🍪</span>
+    <span class="food-bg-emoji e12">🍤</span>
+    <span class="food-bg-emoji e13">🥨</span>
+    <span class="food-bg-emoji e14">🍰</span>
+    <span class="food-bg-emoji e15">🍋</span>
+    <span class="food-bg-emoji e16">🍛</span>
+    <span class="food-bg-emoji e31">🥕</span>
+    <span class="food-bg-emoji e32">🍔</span>
+    <span class="food-bg-emoji e33">🍕</span>
+    <span class="food-bg-emoji e34">🍟</span>
+    <span class="food-bg-emoji e35">🍗</span>
+    <span class="food-bg-emoji e36">🍜</span>
+    <span class="food-bg-emoji e37">🍦</span>
+    <span class="food-bg-emoji e38">🍩</span>
+    <span class="food-bg-emoji e39">🍉</span>
+    <span class="food-bg-emoji e40">🍇</span>
+    <span class="food-bg-emoji e41">🍒</span>
+    <span class="food-bg-emoji e42">🍰</span>
+    <span class="food-bg-emoji e43">🍪</span>
+    <span class="food-bg-emoji e44">🍛</span>
+    <span class="food-bg-emoji e45">🍱</span>
+    <span class="food-bg-emoji e46">🍢</span>
+    <span class="food-bg-emoji e47">🍚</span>
+    <span class="food-bg-emoji e48">🍙</span>
+    <span class="food-bg-emoji e49">🍞</span>
+    <span class="food-bg-emoji e50">🥨</span>
+    <span class="food-bg-emoji e51">🍤</span>
+    <span class="food-bg-emoji e52">🍕</span>
+    <span class="food-bg-emoji e53">🍔</span>
+    <span class="food-bg-emoji e54">🍟</span>
+    <span class="food-bg-emoji e55">🍗</span>
+    <span class="food-bg-emoji e56">🍜</span>
+    <span class="food-bg-emoji e57">🍦</span>
+    <span class="food-bg-emoji e58">🍩</span>
+    <span class="food-bg-emoji e59">🍉</span>
+    <span class="food-bg-emoji e60">🍇</span>
+    <span class="food-bg-emoji e61">🍒</span>
+    <span class="food-bg-emoji e62">🍰</span>
+    <span class="food-bg-emoji e63">🍪</span>
+    <span class="food-bg-emoji e64">🍛</span>
+    <span class="food-bg-emoji e65">🍱</span>
+    <span class="food-bg-emoji e66">🍢</span>
+    <span class="food-bg-emoji e67">🍚</span>
+    <span class="food-bg-emoji e68">🍙</span>
+    <span class="food-bg-emoji e69">🍞</span>
+    <span class="food-bg-emoji e70">🥨</span>
+  </div>
+  <div class="login-container animate-in">
+  <h2>Hello Chef!<span style="font-size:1.2em;">👨‍🍳</span></h2>
+  <h3 class="subtitle-orange">Ready to cook something amazing&nbsp;today?</h3>
     <form>
       <div class="input-group">
         <input type="text" id="username" required />
@@ -19,6 +80,10 @@
         <label for="password">Password</label>
       </div>
       <button type="submit">Login</button>
+      <div class="login-loading" id="loading" style="display:none;">
+        <div class="loader"></div> Loading...
+      </div>
+      <p class="login-message" id="message"></p>
     </form>
   </div>
 
