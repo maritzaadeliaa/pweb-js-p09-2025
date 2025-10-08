@@ -377,6 +377,14 @@ body {
 
 
 /* Wrapper image + meta grid */
+/* .modal-top {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: center;
+  margin-bottom: 2rem;
+} */
+
 .modal-top {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -428,6 +436,7 @@ body {
 .modal-rating {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     padding: 1rem 1.5rem; 
     background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%);
     border-radius: 8px;
@@ -558,15 +567,22 @@ body {
 
 /* Responsive */
 @media (max-width: 768px) {
+    .modal-rating {
+        flex-direction: column; /* ubah jadi vertikal */
+        padding: 0.3rem 1.5rem; 
+        align-items: flex-start; /* biar rata kiri (atau center kalau mau tengah) */
+        width: 50%; /* biar muat penuh di layar kecil */
+        /* gap: 0.5rem; beri jarak antar children */
+    }
     .navbar {
         padding: 1rem;
-        flex-direction: column;
-        gap: 1rem;
-        text-align: center;
+        flex-direction: row;
+        gap: 0.5rem;
+        /* text-align: center; */
     }
 
     .nav-right {
-        flex-direction: column;
+        flex-direction: row;
         gap: 0.5rem;
     }
 
@@ -631,6 +647,24 @@ body {
         width: 35px;
         height: 35px;
         font-size: 1.5rem;
+    }
+    .modal-top {
+        grid-template-columns: 1fr; 
+        grid-template-rows: auto auto;
+        text-align: center; 
+    }
+
+    .modal-image {
+        order: -1; 
+    }
+
+    .modal-image img {
+        width: 100%;
+        height: auto;
+    }
+
+    .modal-meta-grid {
+        justify-items: center;
     }
 }
 
